@@ -608,10 +608,3 @@ function twentyeleven_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'twentyeleven_body_classes' );
-
-add_action( 'admin_menu', 'addAdminMenu' );
-
-function addAdminMenu(){
-    add_menu_page('GEE Admin Settings', 'GEE Admin', 'manage_options', 'gee_admin_settings_page', 'admin_pg_function', ”, 3);
-    add_submenu_page('gee_admin_settings_page','User Role Editor', 'Edit User Roles','manage_options', 'user_role_editor_slug', 'edit_user_roles_function');
-}

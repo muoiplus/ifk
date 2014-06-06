@@ -18,90 +18,67 @@ get_header(); ?>
 <div style="height: 20px;"></div>
 <div class="wrapper">
 <!-- start slide-->
-<div id="slideshow">
-    <div style="display: block; text-align: start; float: none; position: relative; top: auto; right: auto; bottom: auto; left: auto; z-index: auto; width: 989px; height: 350px; margin: 0px; overflow: hidden;" class="caroufredsel_wrapper"><div class="caroufredsel_wrapper" style="display: block; text-align: left; float: none; position: absolute; top: 0px; right: auto; bottom: auto; left: 0px; z-index: auto; width: 989px; height: 350px; margin: 0px; overflow: hidden;"><div style="text-align: left; float: none; position: absolute; top: 0px; right: auto; bottom: auto; left: 0px; margin: 0px; width: 10879px; height: 350px; z-index: auto; opacity: 1;" class="screen">
-                <div class="slide" id="slide_5">
-                    <a>
-                        <div class="screen_mask"></div>
-                        <div class="large_image"><img src="http://ifk.adcvietnam.vn/uploads/042014/taymo_55fed03b.jpg" alt="Lanato"></div>
-                    </a>
-                    <div class="info">
-                        <h4><a>Lanato</a></h4>
-                    </div>
-                    <div class="descript">
-                        <div class="des-content">
-                            <h3 style="font-weight: bold; color: red;">Lanato</h3>
-                            Trading corporation and application development
-                            technologies Vietman, international transation name as applied
-                            technology development And commerce Vietnam joint stock company
-                            <div style="margin-top:10px">
-                                <a class="btnSend"> Read more </a>
+    <div id="slideshow">
+        <div class="caroufredsel_wrapper" style="display: block; text-align: start; float: none; position: relative; top: auto; right: auto; bottom: auto; left: auto; z-index: auto; width: 989px; height: 350px; margin: 0px; overflow: hidden;">
+            <div class="screen" style="text-align: left; float: none; position: absolute; top: 0px; right: auto; bottom: auto; left: 0px; margin: 0px; width: 10879px; height: 350px; z-index: auto; opacity: 1;">
+
+                <?php
+                $debut = 0; //The first article to be displayed
+
+                ?>
+                <?php while(have_posts()) : the_post(); ?>
+                    <?php
+                    $myposts = get_posts('numberposts=-1&offset=$debut');
+                    foreach($myposts as $post) :
+                        ?>
+                        <div class="slide" id="slide_<?php echo get_the_ID();?>">
+                            <a>
+                                <div class="screen_mask"></div>
+                                <div class="large_image">
+                                    <?php echo the_post_thumbnail();?>
+                                </div>
+                            </a>
+                            <div class="info">
+                                <h4><a><?php the_title(); ?></a></h4>
+                            </div>
+                            <div class="descript">
+                                <div class="des-content">
+                                    <h3 style="font-weight: bold; color: red;"><?php the_title(); ?></h3>
+                                    <?php echo get_field( "description_project" );?>
+                                    <div style="margin-top:10px">
+                                        <a class="btnSend" href="<?php the_permalink();?>"> Read more </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div><div class="slide" id="slide_1">
-                    <a href="http://ifk.adcvietnam.vn/">
-                        <div class="screen_mask"></div>
-                        <div class="large_image"><img src="http://ifk.adcvietnam.vn/uploads/042014/taymo_55fed03b.jpg" alt="Hailinh Plaza"></div>
-                    </a>
-                    <div class="info">
-                        <h4><a href="http://ifk.adcvietnam.vn/">Hailinh Plaza</a></h4>
-                    </div>
-                    <div class="descript">
-                        <div class="des-content">
-                            <h3 style="font-weight: bold; color: red;">Hailinh Plaza</h3>
-                            Trading corporation and application development
-                            technologies Vietman, international transation name as applied
-                            technology development And commerce Vietnam joint stock company
-                            <div style="margin-top:10px">
-                                <a href="http://ifk.adcvietnam.vn/" class="btnSend"> Read more </a>
-                            </div>
-                        </div>
-                    </div>
-                </div><div class="slide" id="slide_2">
-                    <a href="http://ifk.adcvietnam.vn/">
-                        <div class="screen_mask"></div>
-                        <div class="large_image"><img src="http://ifk.adcvietnam.vn/uploads/042014/taymo_55fed03b.jpg" alt="Fullhouse tower"></div>
-                    </a>
-                    <div class="info">
-                        <h4><a href="http://ifk.adcvietnam.vn/">Fullhouse tower</a></h4>
-                    </div>
-                    <div class="descript">
-                        <div class="des-content">
-                            <h3 style="font-weight: bold; color: red;">Fullhouse tower</h3>
-                            Trading corporation and application development
-                            technologies Vietman, international transation name as applied
-                            technology development And commerce Vietnam joint stock company
-                            <div style="margin-top:10px">
-                                <a href="http://ifk.adcvietnam.vn/" class="btnSend"> Read more </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    <?php endforeach; ?>
+                <?php endwhile; ?>
+            </div>
         </div>
-    </div>
-    <div style="display: block; text-align: start; float: none; position: absolute; top: 208px; right: 0px; bottom: 0px; left: 730px; z-index: auto; width: 260px; height: 136px; margin: 0px; overflow: hidden;" class="caroufredsel_wrapper"><div class="caroufredsel_wrapper" style="display: block; text-align: left; float: none; position: absolute; top: 0px; right: auto; bottom: auto; left: 0px; z-index: auto; width: 260px; height: 136px; margin: 0px; overflow: hidden;"><ul style="text-align: left; float: none; position: absolute; top: 0px; right: auto; bottom: auto; left: 0px; margin: 0px; height: 816px; width: 260px;" class="thumbnails"><li class="slide_8 selected">
-                    <div class="thumb">
-                        <img src="http://ifk.adcvietnam.vn/uploads/042014/55294577-1272180987-bat-dong-san-3_564dff5b.jpg" alt="The prival hotel">
-                    </div>
-                    <h4 class="h4">The prival hotel</h4>
-                </li><li class="slide_9">
-                    <div class="thumb">
-                        <img src="http://ifk.adcvietnam.vn/uploads/042014/55294577-1272180987-bat-dong-san-3_564dff5b.jpg" alt="Extertion">
-                    </div>
-                    <h4 class="h4">Extertion</h4>
-                </li><li class="slide_10">
-                    <div class="thumb">
-                        <img src="http://ifk.adcvietnam.vn/uploads/042014/55294577-1272180987-bat-dong-san-3_564dff5b.jpg" alt="Lanato">
-                    </div>
-                    <h4 class="h4">Lanato</h4>
-                </li>
+        <div class="caroufredsel_wrapper" style="display: block; text-align: start; float: none; position: absolute; top: auto; right: 0px; bottom: 0px; left: auto; z-index: auto; width: 260px; height: 136px; margin: 0px; overflow: hidden;">
+            <ul class="thumbnails" style="text-align: left; float: none; position: absolute; top: 0px; right: auto; bottom: auto; left: 0px; margin: 0px; height: 816px; width: 260px;">
+                <?php
+                $debut = 0; //The first article to be displayed
+
+                ?>
+                <?php while(have_posts()) : the_post(); ?>
+                    <?php
+                    $myposts = get_posts('numberposts=-1&offset=$debut');
+                    foreach($myposts as $post) :
+                        ?>
+                        <li class="slide_<?php echo get_the_ID();?> selected">
+                            <div class="thumb">
+                                <?php echo the_post_thumbnail();?>
+                            </div>
+                            <h4 class="h4"><?php the_title(); ?></h4>
+                        </li>
+                    <?php endforeach; ?>
+                <?php endwhile; ?>
             </ul>
         </div>
     </div>
-</div>
 <!-- end slide-->
-
+    <div class="clear"></div>
 <!-- start project-->
 <div class="title-box">
     <h3>Projects</h3>
@@ -116,6 +93,7 @@ get_header(); ?>
         $i++;
         if($i >= 5){break;}
         $cat_name = get_cat_name($cat_id);
+        if($cat_name !="Uncategorized"){
         ?>
         <div class="item">
             <a title="Residential Projects" href="<?php echo get_category_link($cat_id);?>">
@@ -126,8 +104,7 @@ get_header(); ?>
                 <?php echo category_description($cat_id);?>
             </div>
         </div>
-
-    <?php } ?>
+    <?php }} ?>
 
 </div>
 <div class="clear"></div>
@@ -139,36 +116,24 @@ get_header(); ?>
     <div class="center">
         <div style="visibility: visible; overflow: hidden; position: relative; z-index: 2; left: 0px; width: 705px;" class="anyClass">
             <ul style="margin: 0px; padding: 0px; position: relative; list-style-type: none; z-index: 1; width: 6345px; left: -2820px;">
+
                 <?php
-                $categories = get_categories(); //retrieve all the categories and save them as a variable $categories
-
-                foreach($categories as $category) : // Use foreach to split $categories into individual categories and store as variable $category
-                    ?>
-                    <?php
-                    $catid = $category->cat_ID; //Store the category ID as a variable to be used in WP_Query
-
-                    $args = array(
-                        'cat' => $catid,
-                    );
-
-                    $query = new WP_Query($args);
-
-                    // Start the Loop. You can use your own loop here
-                    while ( $query->have_posts() ) : $query->the_post();
-                        ?>
-                        <li style="overflow: hidden; float: left; width: 210px; height: 165px;">
-                            <p class="date"> <?php the_date(); ?> </p>
-                            <a href="<?php the_permalink() ?>"> <h3> <?php the_title(); ?> </h3></a>
-                            <p>
-                                <?php the_title(); ?>
-                            </p>
-                        </li>
-                    <?php
-                    endwhile;
-                endforeach;
-                /* Restore original Post Data */
-                wp_reset_postdata();
+                $debut = 0; //The first article to be displayed
                 ?>
+                <?php while(have_posts()) : the_post(); ?>
+                        <?php
+                        $myposts = get_posts('numberposts=-1&offset=$debut');
+                        foreach($myposts as $post) :
+                            ?>
+                            <li style="overflow: hidden; float: left; width: 210px; height: 165px;">
+                                <p class="date"> <?php the_time('d/m/y') ?> </p>
+                                <a href="<?php the_permalink() ?>"> <h3> <?php the_title(); ?> </h3></a>
+                                <p>
+                                    <?php the_title(); ?>
+                                </p>
+                            </li>
+                        <?php endforeach; ?>
+                <?php endwhile; ?>
             </ul>
         </div>
     </div>
