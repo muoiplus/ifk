@@ -71,7 +71,7 @@
         <div class="wrapper">
             <div class="header">
                 <div class="site_title">
-                    <a href="#">
+                    <a href="<?php echo get_site_url(); ?>">
                         <img src="<?php bloginfo('template_directory'); ?>/images/logo.png" style="float: left; margin-top: 12px;" alt="IFK" title="IFK">
                     </a>
                 </div>
