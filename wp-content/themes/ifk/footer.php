@@ -35,16 +35,16 @@
                 Follow us:
             </p>
             <a title="" alt="" href="#">
-                <img title="" alt="" src="http://ifk.adcvietnam.vn/content/themes/web/images/youtube.png" class="img-wapper">
+                <img title="" alt="" src="<?php bloginfo('template_directory'); ?>/images/youtube.png" class="img-wapper">
             </a>
             <a title="" alt="" href="#">
-                <img title="" alt="" src="http://ifk.adcvietnam.vn/content/themes/web/images/youtube.png" class="img-wapper">
+                <img title="" alt="" src="<?php bloginfo('template_directory'); ?>/images/youtube.png" class="img-wapper">
             </a>
             <a title="" alt="" href="#">
-                <img title="" alt="" src="http://ifk.adcvietnam.vn/content/themes/web/images/youtube.png" class="img-wapper">
+                <img title="" alt="" src="<?php bloginfo('template_directory'); ?>/images/youtube.png" class="img-wapper">
             </a>
             <a title="" alt="" href="#">
-                <img title="" alt="" src="http://ifk.adcvietnam.vn/content/themes/web/images/google.png" class="img-wapper">
+                <img title="" alt="" src="<?php bloginfo('template_directory'); ?>/images/google.png" class="img-wapper">
             </a>
         </div>
     </div>

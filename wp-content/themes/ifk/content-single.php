@@ -9,7 +9,9 @@
 ?>
 
 <div style="padding-top: 27px;" class="content-right float-l">
-
+    <div class="sitemap">
+        <?php the_breadcrumb(); ?>
+    </div>
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 
@@ -23,7 +25,7 @@
 	<div class="entry-content" style="margin-top: 20px;">
 		<?php the_content(); ?>
 	</div><!-- .entry-content -->
-
+    <div class="fb-like" data-href="<?php the_permalink();?>" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
     <hr>
     <h2 style="text-transform:uppercase;margin-bottom:10px">Các tin khác</h2>
     <div class="other-news">
@@ -41,4 +43,5 @@
             <?php wp_reset_query(); ?>
         </ul>
     </div>
+    <div class="fb-comments" data-href="<?php the_permalink();?>" data-numposts="5" data-width="645" data-colorscheme="light"></div>
 </div><!-- #post

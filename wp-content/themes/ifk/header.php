@@ -91,11 +91,9 @@
                         <div class="clear"></div>
                     </div>
                     <div class="search">
-                        <form method="get" action="/tim-kiem">
-                            <input name="keyword" id="keyword" title="keyword" class="txt_field" placeholder="Search here" type="text">
-                            <input value=" " alt="Search" id="searchbutton" title="Search" class="sub_btn" type="submit">
-                        </form>
+                        <?php get_search_form(); ?>
                     </div>
+
                 </div>
                 <script type="text/javascript">
                     $(function () {

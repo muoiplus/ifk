@@ -606,3 +606,18 @@ function twentyeleven_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'twentyeleven_body_classes' );
+
+function the_breadcrumb() {
+    if (!is_home()) {
+        echo '<a href="';
+        echo get_option('home');
+        echo '">';
+        bloginfo('name');
+        echo "</a>» ";
+        if (is_category() || is_single()) {
+            the_category('title_li=');
+        } elseif (is_page()) {
+            echo the_title();
+        }
+    }
+}
