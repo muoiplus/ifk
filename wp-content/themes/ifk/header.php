@@ -96,46 +96,6 @@
                     </div>
 
                 </div>
-                <script type="text/javascript">
-                    $(function () {
-                        var url = window.location.href;
-
-                        activeMenu(url);
-
-                        var a = $(".sitemap a");
-
-                        if (a.length > 0) {
-                            activeMenu(a.last().attr("href"));
-                        }
-                    });
-
-                    function activeMenu(url) {
-                        url = url.substring(url.lastIndexOf("/"), url.length);
-
-                        $("ul.ul-main-menu a").each(function () {
-                            var _this = $(this);
-                            var href = _this.attr("href");
-                            href = href.substring(href.lastIndexOf("/"), href.length);
-
-                            if (href != url) {
-                                return;
-                            }
-                            console.log(href.indexOf(url));
-                            var parent = _this.parent();
-                            var _class = parent.parent().attr("class");
-
-                            while (_class == null || _class.indexOf("ul-main-menu") == -1) {
-                                parent = parent.parent();
-                                _class = parent.parent().attr("class");
-                            }
-
-                            parent.addClass("active");
-                        });
-                    }
-                </script>
-
-
-
                 <div class="menu">
                     <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
                 </div>

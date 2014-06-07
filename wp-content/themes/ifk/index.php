@@ -80,11 +80,11 @@ get_header(); ?>
 <div class="products">
     <?php
     $category_ids = get_all_category_ids();
-    unset($category_ids[0]);
+//    unset($category_ids[0]);
     $i = 0;
     foreach($category_ids as $cat_id) {
         $i++;
-        if($i >= 5){break;}
+        if($i > 5){break;}
         $cat_name = get_cat_name($cat_id);
         if($cat_name !="Uncategorized"){
         ?>
