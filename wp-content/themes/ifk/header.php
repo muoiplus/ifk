@@ -24,6 +24,7 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
+<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 <title><?php
 	/*
 	 * Print the <title> tag based on what is being viewed.
