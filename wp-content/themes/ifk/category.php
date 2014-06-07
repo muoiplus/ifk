@@ -8,58 +8,112 @@
  */
 
 get_header(); ?>
+<div id="wrapper" class="body_wrapper backgour-wapper">
+<div style="height: 20px;"></div>
+<div class="wrapper">
+<div class="content-left float-l">
 
-		<section id="primary">
-			<div id="content" role="main">
+    <div class="sidebar_box">
+        <span class="bottom"></span>
+        <h3>Project</h3>
+        <div class="content-box">
+            <ul class="sidebar_list">
+                <li class="first">
+                    <a title="Residential Projects" href="/residential-projects-72">Residential Projects</a>
+                </li>
+                <li>
+                    <a title="Urban Areas" href="/urban-areas-73">Urban Areas</a>
+                </li>
+                <li>
+                    <a title="Commercials - Hospitality - Tourism" href="/commercials--hospitality--tourism-75">Commercials - Hospitality - Tourism</a>
+                </li>
+            </ul>
 
-			<?php if ( have_posts() ) : ?>
+        </div>
+    </div>
 
-				<header class="page-header">
-					<h1 class="page-title"><?php
-						printf( __( 'Category Archives: %s', 'twentyeleven' ), '<span>' . single_cat_title( '', false ) . '</span>' );
-					?></h1>
 
-					<?php
-						$category_description = category_description();
-						if ( ! empty( $category_description ) )
-							echo apply_filters( 'category_archive_meta', '<div class="category-archive-meta">' . $category_description . '</div>' );
-					?>
-				</header>
+    <div class="sidebar_box">
+        <span class="bottom"></span>
+        <h3>
+            <a target="_blank" href="#" class="sidebar_box_icon">
+            </a>Projects news
+        </h3>
+        <div class="content-box">
+            <?php
+            $myposts = get_posts();
+            $i=0;
+            foreach($myposts as $post) :
+                $i++;
+                if($i >=8){break;}
+                $showSlide = get_field('new_post', $post->ID);
+                if($showSlide[0] == "yes"){
+                    ?>
+                    <div class="bs_box">
+                        <a href="<?php the_permalink();?>"><?php echo the_post_thumbnail();?></a>
+                        <h4><a href="<?php the_permalink();?>"><?php the_title();?></a></h4>
+                        <div class="clear"></div>
+                    </div>
+                <?php }?>
+            <?php endforeach; ?>
+        </div>
+    </div>
 
-				<?php twentyeleven_content_nav( 'nav-above' ); ?>
 
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+</div>
+<div style="padding-top: 27px;" class="content-right float-l">
+    <div class="title-box extent">
+        <h3>
+            <?php
+            $category = get_the_category();
+            echo $category[0]->cat_name;
+            ?>
+        </h3>
+    </div>
+    <div class="list-news">
 
-					<?php
-						/* Include the Post-Format-specific template for the content.
-						 * If you want to overload this in a child theme then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'content', get_post_format() );
-					?>
+        <?php
+        $catPost = get_posts($cat); //change this
+        foreach ($catPost as $post) : setup_postdata($post); ?>
+            <div class="items">
+                <div class="box-images">
+                    <a href="<?php the_permalink();?>"><?php echo the_post_thumbnail();?></a>
+                </div>
+                <div class="content-items">
+                    <h3>
+                        <a href="<?php the_permalink();?>"><?php the_title(); ?></a>
+                    </h3>
+                    <p>
+                        <?php the_time('d/m/y') ?>
+                        <br>
+                        <?php echo get_field( "description_project" );?>
+                    </p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        <?php  endforeach;?>
 
-				<?php endwhile; ?>
 
-				<?php twentyeleven_content_nav( 'nav-below' ); ?>
 
-			<?php else : ?>
+        <div class="clearfix"></div>
+    </div>
+    <style>
+        .news-cat .item .item-review h3 a{
+            color:#b200b2 !important;
+        }
+        .box-new-nav1 li a:before{
+            background:#b200b2 !important;
+        }
+    </style>
 
-				<article id="post-0" class="post no-results not-found">
-					<header class="entry-header">
-						<h1 class="entry-title"><?php _e( 'Nothing Found', 'twentyeleven' ); ?></h1>
-					</header><!-- .entry-header -->
 
-					<div class="entry-content">
-						<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'twentyeleven' ); ?></p>
-						<?php get_search_form(); ?>
-					</div><!-- .entry-content -->
-				</article><!-- #post-0 -->
 
-			<?php endif; ?>
 
-			</div><!-- #content -->
-		</section><!-- #primary -->
 
-<?php get_sidebar(); ?>
+</div>
+<div class="clear"></div>
+</div>
+<div class="div-bottom"></div>
+
+</div>
 <?php get_footer(); ?>

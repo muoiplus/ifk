@@ -122,7 +122,7 @@ a:hover {
 }
 
 .search .sub_btn {
-    background: url("http://ifk.adcvietnam.vn/content/themes/web/images/btnSearch.png") no-repeat scroll 7px 4px rgba(0, 0, 0, 0);
+    background: url("images/btnSearch.png") no-repeat scroll 7px 4px rgba(0, 0, 0, 0);
     border: medium none;
     cursor: pointer;
     width: 21px;
@@ -487,7 +487,7 @@ a:hover {
     height: 33px;
     line-height: 33px;
     margin-bottom: 0;
-    background: #f0f0f0 url(../images/sidebar_header.png) right center no-repeat;
+    background: #f0f0f0 url(images/sidebar_header.png) right center no-repeat;
     color: red;
     position: relative;
 }
@@ -589,7 +589,7 @@ a:hover {
 }
 
 .content-right h1 {
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
 }
 
 .socical {
@@ -793,5 +793,14 @@ a:hover {
 }
 .other-news li{
     padding-left: 10px;
-    background: url(../images/bg-news.jpg) no-repeat scroll left 9px rgba(0, 0, 0, 0);
+    background: url(images/bg-news.jpg) no-repeat scroll left 9px rgba(0, 0, 0, 0);
+}
+.news-details h1, #related-link-container li a, .other-news ul li a {
+    color: #B200B2 !important;
+}
+#related-link-container {
+    background-color: rgba(178, 0, 178, 0.06) !important;
+}
+.box-new-nav1 li a:before {
+    background: none repeat scroll 0 0 #B200B2 !important;
 }

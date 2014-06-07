@@ -21,15 +21,11 @@ get_header(); ?>
     <div id="slideshow">
         <div class="caroufredsel_wrapper" style="display: block; text-align: start; float: none; position: relative; top: auto; right: auto; bottom: auto; left: auto; z-index: auto; width: 989px; height: 350px; margin: 0px; overflow: hidden;">
             <div class="screen" style="text-align: left; float: none; position: absolute; top: 0px; right: auto; bottom: auto; left: 0px; margin: 0px; width: 10879px; height: 350px; z-index: auto; opacity: 1;">
-
-                <?php
-                $debut = 0; //The first article to be displayed
-
-                ?>
-                <?php while(have_posts()) : the_post(); ?>
                     <?php
-                    $myposts = get_posts('numberposts=-1&offset=$debut');
+                    $myposts = get_posts();
                     foreach($myposts as $post) :
+                        $showSlide = get_field('anable_slide_home_page', $post->ID);
+                        if($showSlide[0] == "yes"){
                         ?>
                         <div class="slide" id="slide_<?php echo get_the_ID();?>">
                             <a>
@@ -51,20 +47,17 @@ get_header(); ?>
                                 </div>
                             </div>
                         </div>
+                            <?php }?>
                     <?php endforeach; ?>
-                <?php endwhile; ?>
             </div>
         </div>
         <div class="caroufredsel_wrapper" style="display: block; text-align: start; float: none; position: absolute; top: auto; right: 0px; bottom: 0px; left: auto; z-index: auto; width: 260px; height: 136px; margin: 0px; overflow: hidden;">
             <ul class="thumbnails" style="text-align: left; float: none; position: absolute; top: 0px; right: auto; bottom: auto; left: 0px; margin: 0px; height: 816px; width: 260px;">
-                <?php
-                $debut = 0; //The first article to be displayed
-
-                ?>
-                <?php while(have_posts()) : the_post(); ?>
                     <?php
-                    $myposts = get_posts('numberposts=-1&offset=$debut');
+                    $myposts = get_posts();
                     foreach($myposts as $post) :
+                        $showSlide = get_field('anable_slide_home_page', $post->ID);
+                        if($showSlide[0] == "yes"){
                         ?>
                         <li class="slide_<?php echo get_the_ID();?> selected">
                             <div class="thumb">
@@ -72,8 +65,8 @@ get_header(); ?>
                             </div>
                             <h4 class="h4"><?php the_title(); ?></h4>
                         </li>
+                        <?php }?>
                     <?php endforeach; ?>
-                <?php endwhile; ?>
             </ul>
         </div>
     </div>

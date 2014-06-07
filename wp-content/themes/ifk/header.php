@@ -71,7 +71,7 @@
         <div class="wrapper">
             <div class="header">
                 <div class="site_title">
-                    <a href="http://ifk.adcvietnam.vn/">
+                    <a href="#">
                         <img src="<?php bloginfo('template_directory'); ?>/images/logo.png" style="float: left; margin-top: 12px;" alt="IFK" title="IFK">
                     </a>
                 </div>

@@ -578,13 +578,11 @@ if ( ! function_exists( 'twentyeleven_posted_on' ) ) :
  * @since Twenty Eleven 1.0
  */
 function twentyeleven_posted_on() {
-	printf( __( '<span class="sep">Posted on </span><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'twentyeleven' ),
+	printf( __( '<span class="sep" style="color: #C3C3C3">Posted date:  </span><time style="color: #C3C3C3" class="entry-date" datetime="%3$s" pubdate>%4$s</time>', 'twentyeleven' ),
 		esc_url( get_permalink() ),
-		esc_attr( get_the_time() ),
-		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date() ),
-		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-		esc_attr( sprintf( __( 'View all posts by %s', 'twentyeleven' ), get_the_author() ) ),
+		esc_attr( get_the_time('d/m/y') ),
+		esc_attr( get_the_date( 'd/m/y' ) ),
+		esc_html( get_the_date('d/m/y') ),
 		get_the_author()
 	);
 }
