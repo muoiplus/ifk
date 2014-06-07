@@ -14,9 +14,10 @@
 
 get_header(); ?>
 
-		<div id="primary">
-			<div id="content" role="main">
-
+    <div id="wrapper" class="body_wrapper backgour-wapper">
+        <div style="height: 20px;"></div>
+        <div class="wrapper">
+            <div style="padding: 15px 20px;" class="wrapper">
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<?php get_template_part( 'content', 'page' ); ?>
@@ -24,8 +25,8 @@ get_header(); ?>
 					<?php comments_template( '', true ); ?>
 
 				<?php endwhile; // end of the loop. ?>
-
-			</div><!-- #content -->
-		</div><!-- #primary -->
+            </div>
+			</div><!-- #wrapper -->
+		</div><!-- #wrapper -->
 
 <?php get_footer(); ?>
