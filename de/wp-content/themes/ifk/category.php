@@ -27,14 +27,15 @@ get_header(); ?>
                     $cat_name = get_cat_name($cat_id);
                     if($cat_name !="Uncategorized"){
                         ?>
-                        <?php if($i==1):?>
+                        <?php if($i==1){?>
                             <li class="first">
                                 <a title="<?php echo $cat_name;?>" href="<?php echo get_category_link($cat_id);?>"><?php echo $cat_name;?></a>
                             </li>
-                        <?php endif;?>
+                        <?php }else{?>
                             <li>
                                 <a title="<?php echo $cat_name;?>" href="<?php echo get_category_link($cat_id);?>"><?php echo $cat_name;?></a>
                             </li>
+                        <?php }?>
                     <?php }} ?>
             </ul>
 
