@@ -103,7 +103,7 @@ get_header(); ?>
 <div class="news">
     <div class="left">
         <h3> Lettesr news </h3>
-        <a href="http://ifk.adcvietnam.vn/project-69"> Read more </a>
+        <a href="#"> Read more </a>
     </div>
     <div class="center">
         <div style="visibility: visible; overflow: hidden; position: relative; z-index: 2; left: 0px; width: 705px;" class="anyClass">
