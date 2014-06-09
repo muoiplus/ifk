@@ -805,3 +805,12 @@ a:hover {
 .box-new-nav1 li a:before {
     background: none repeat scroll 0 0 #B200B2 !important;
 }
+article {
+    float: left;
+    margin-bottom: 20px;
+    padding-top: 27px;
+    width: 720px;
+}
+.entry-header h1{
+    margin-bottom: 20px;
+}
