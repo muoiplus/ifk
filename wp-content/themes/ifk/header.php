@@ -86,7 +86,7 @@
                             <img src="<?php bloginfo('template_directory'); ?>/images/ru-RU.png" title="Russia" alt="ru-RU.png">Russia
                         </a>
                         <a href="#">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/de-DE.png" title="Germany" alt="de-DE.png">Germany
+                            <img src="<?php bloginfo('template_directory'); ?>/images/de-DE.png" title="Germany" alt="de-DE.png">German
                         </a>
 
                         <div class="clear"></div>
