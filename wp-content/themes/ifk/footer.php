@@ -49,13 +49,10 @@
         <div class="f-center">
             <p>
                 <a class="link-bottom" href="/"> Home </a>
-                <a class="link-bottom" href="/news-67"> News </a>
-                <a class="link-bottom" href="/project-69"> Project </a>
-                <a class="link-bottom" href="/introduction-66"> Imprint  </a>
-                <a class="link-bottom" href="/invesment-areas-68"> Legal Disclaimer </a>
-                <a class="link-bottom" href="/contact-us-71"> Contact us </a>
-
-
+                <a class="link-bottom" href="<?php echo get_site_url(); ?>"> News </a>
+                <a class="link-bottom" href="<?php echo get_site_url(); ?>"> Project </a>
+                <a class="link-bottom" href="<?php echo get_site_url(); ?>/?page_id=95"> Imprint and Disclaimer</a>
+                <a class="link-bottom" href="<?php echo get_site_url(); ?>/?page_id=72"> Contact us </a>
             </p>
         </div>
         <div class="f-right">
