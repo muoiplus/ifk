@@ -21,19 +21,19 @@
         <marquee direction="left" behavior="scroll">
             <?php $upload_dir = wp_upload_dir(); ?>
             <a title="" alt="" href="/">
-                <img title="" alt="" src="<?php echo $upload_dir['basedir']; ?>/dt1_243cd2ba.png" class="img-wapper">
+                <img title="" alt="" src="<?php echo $upload_dir['baseurl']; ?>/dt1_243cd2ba.png" class="img-wapper">
             </a>
             <a title="" alt="" href="/">
-                <img title="" alt="" src="<?php echo $upload_dir['basedir']; ?>/dt2_2a3e3eff.png" class="img-wapper">
+                <img title="" alt="" src="<?php echo $upload_dir['baseurl']; ?>/dt2_2a3e3eff.png" class="img-wapper">
             </a>
             <a title="" alt="" href="/">
-                <img title="" alt="" src="<?php echo $upload_dir['basedir']; ?>/dt3_a07e5c9d.png" class="img-wapper">
+                <img title="" alt="" src="<?php echo $upload_dir['baseurl']; ?>/dt3_a07e5c9d.png" class="img-wapper">
             </a>
             <a title="" alt="" href="/">
-                <img title="" alt="" src="<?php echo $upload_dir['basedir']; ?>/dt4_78d510a5.png" class="img-wapper">
+                <img title="" alt="" src="<?php echo $upload_dir['baseurl']; ?>/dt4_78d510a5.png" class="img-wapper">
             </a>
             <a title="" alt="" href="/">
-                <img title="" alt="" src="<?php echo $upload_dir['basedir']; ?>/dt5_df5ce1ea.png" class="img-wapper">
+                <img title="" alt="" src="<?php echo $upload_dir['baseurl']; ?>/dt5_df5ce1ea.png" class="img-wapper">
             </a>
         </marquee>
     </div>
