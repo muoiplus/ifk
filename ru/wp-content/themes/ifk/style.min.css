@@ -1,0 +1,256 @@
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+input, textarea {
+    padding: 5px;
+    border: 1px solid #CCC;
+    width: 250px;
+}
+
+input:focus, textarea:focus {
+    border: 1px solid #4bc23b;
+    outline: 0;
+}
+
+body {
+    background: #FFF;
+    line-height: 22px;
+    font-size: 13px;
+    color: #535353;
+    /*text-align: justify;*/
+}
+
+button, input[type=submit], input[type=button] {
+    padding: 8px 15px;
+    font-size: 14px;
+    color: #fff;
+    background: #fc5400;
+    cursor: pointer;
+    border: 0;
+    width: 70px;
+}
+
+button:hover, input[type=submit]:hover, input[type=button]:hover {
+    /*background: #529E2C;*/
+}
+
+ul {
+    list-style: none;
+}
+
+/*a {
+    color: #414141;
+    outline: 0;
+    text-decoration: none;
+    transition: color .15s ease-in-out;
+    -moz-transition: color .15s ease-in-out;
+    -webkit-transition: color .15s ease-in-out;
+}
+
+    a:hover {
+        color: #fc5400;
+    }
+
+iframe,*/ img {
+              border: 0;
+          }
+
+img {
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+#main {
+    margin: 25px 0;
+}
+
+#main_colum {
+    float: left;
+    width: 990px;
+    overflow: hidden;
+}
+
+#container {
+    width: 970px;
+}
+
+
+#slideshow {
+    position: relative;
+    z-index: 0;
+}
+
+#slideshow .screen {
+    height: 350px;
+    overflow: hidden;
+}
+
+#slideshow .screen_mask {
+    width: 720px;
+    height: 330px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/slideshow_img_bg.png) 0 0 no-repeat;
+    z-index: 9;
+}
+
+#slideshow .slide {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    background: #fff;
+    color: #FFF;
+    width: 989px;
+}
+
+#slideshow .slide .large_image {
+    width: 730px;
+    height: 350px;
+    overflow: hidden;
+}
+
+#slideshow .slide .large_image img {
+    width: 100%;
+    min-height: 100%;
+}
+
+#slideshow .slide .info {
+    width: 710px;
+    height: 50px;
+    padding: 0 10px;
+    overflow: hidden;
+    margin-top: -50px;
+    opacity: 0.7;
+    background-color: rgba(0, 0, 0, 0.59);
+}
+
+#slideshow .slide h4 {
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 28px;
+    padding: 10px 0 10px 20px;
+    text-transform: uppercase;
+    font-family: Arial,Helvetica,sans-serif;
+}
+
+#slideshow .slide h4 a {
+    color: #FFF;
+}
+
+#slideshow .slide .summary {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    height: 45px;
+    overflow: hidden;
+}
+
+#slideshow .descript {
+    width: 260px;
+    background: white url(../images/backgroud_slide.png) repeat-x;
+    float: right;
+    height: 214px;
+    position: absolute;
+    top: 0px;
+    right: -1px;
+    color: #333;
+}
+
+#slideshow .descript .btnSend {
+    background: #5F5452;
+    cursor: pointer;
+    width: 90px;
+    height: 26px;
+    margin-top: 20px;
+    font-size: 15px;
+    color: #ffffff;
+    padding: 5px 10px;
+}
+
+#slideshow .descript .des-content {
+    padding: 15px 23px 5px;
+}
+
+#slideshow .thumbnails {
+    background: #FFF;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 260px;
+    height: 430px;
+    overflow: hidden;
+}
+
+#slideshow .thumbnails li {
+    padding: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #EFEFEF;
+}
+
+#slideshow .thumbnails li .thumb {
+    float: left;
+    width: 67px;
+    height: 58px;
+    margin: 0 5px 0 18px;
+    overflow: hidden;
+}
+
+#slideshow .thumbnails li .thumb img {
+    width: 67px;
+    min-height: 41px;
+    margin: 10px 0;
+}
+
+.h4 {
+    font-weight: bold !important;
+    margin: 20px 0 5px 100px !important;
+}
+
+#slideshow .thumbnails li.selected {
+    width: 250px;
+    background-color: white !important;
+}
+
+#slideshow .thumbnails li p {
+    line-height: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    padding: 10px;
+}
+
+#slideshow .navpage {
+    z-index: 9;
+    position: absolute;
+    bottom: 0;
+    left: 610px;
+    display: block;
+    width: 40px;
+    color: #FFF;
+    background: #C00;
+}
+
+#slideshow .navpage a {
+    display: block;
+    width: 40px;
+    height: 50px;
+    text-indent: -99999px;
+    background: #fc5400 url(../images/slider-arrows.png) 12px 50% no-repeat;
+}
+
+#slideshow .navpage a.next {
+    background-position: -32px 50%;
+}
+
+#slideshow .navpage a:hover {
+    background-color: #ff8142;
+}
+
+
+.thumbnails h3 {
+    margin: 0 12px;
+    font-weight: bold;
+}
