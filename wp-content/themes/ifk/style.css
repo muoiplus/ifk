@@ -807,11 +807,12 @@ a:hover {
 }
 
 article {
-    float: left;
-    margin-bottom: 20px;
-    padding-top: 27px;
-    width: 720px;
-}
+     float: left;
+     margin-bottom: 20px;
+     padding-top: 27px;
+     width: 720px;
+ }
 .entry-header h1{
     margin-bottom: 20px;
 }
+.wpcf7-form-control-wrap {display: block;clear: both;}

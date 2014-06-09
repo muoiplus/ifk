@@ -814,3 +814,4 @@ article {
 .entry-header h1{
     margin-bottom: 20px;
 }
+.wpcf7-form-control-wrap {display: block;clear: both;}
