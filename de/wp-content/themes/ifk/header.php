@@ -79,13 +79,13 @@
                 <div class="header_right">
                     <div class="language">
 
-                        <a href="<?php echo get_site_url(); ?>">
+                        <a href="http://zuutheme.com/ifk/">
                             <img src="<?php bloginfo('template_directory'); ?>/images/en-US.png" title="English" alt="en-US.png">English
                         </a>
-                        <a href="<?php echo get_site_url(); ?>/ru">
+                        <a href="http://zuutheme.com/ifk/ru/">
                             <img src="<?php bloginfo('template_directory'); ?>/images/ru-RU.png" title="Russia" alt="ru-RU.png">Russia
                         </a>
-                        <a href="<?php echo get_site_url(); ?>/de">
+                        <a href="http://zuutheme.com/ifk/de/">
                             <img src="<?php bloginfo('template_directory'); ?>/images/de-DE.png" title="Germany" alt="de-DE.png">German
                         </a>
 
