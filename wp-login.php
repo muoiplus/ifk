@@ -874,7 +874,20 @@ default:
 	?>
 	<p class="forgetmenot"><label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever" <?php checked( $rememberme ); ?> /> <?php esc_attr_e('Remember Me'); ?></label></p>
 	<p class="submit">
-		<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="<?php esc_attr_e('Log In'); ?>" />
+    <input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="<?php esc_attr_e('Log In'); ?>" />
+    <div class="language" style="float: left; margin-top: 18px;">
+        <a href="<?php echo get_site_url(); ?>/en" style="margin-right: 10px">
+            <img src="<?php bloginfo('template_directory'); ?>/images/en-US.png" title="English" alt="en-US.png">English
+        </a>
+        <a href="<?php echo get_site_url(); ?>/ru" style="margin-right: 10px">
+            <img src="<?php bloginfo('template_directory'); ?>/images/ru-RU.png" title="Russia" alt="ru-RU.png">Russia
+        </a>
+        <a href="<?php echo get_site_url(); ?>/de" style="margin-right: 10px">
+            <img src="<?php bloginfo('template_directory'); ?>/images/de-DE.png" title="Germany" alt="de-DE.png">German
+        </a>
+
+        <div class="clear"></div>
+    </div>
 <?php	if ( $interim_login ) { ?>
 		<input type="hidden" name="interim-login" value="1" />
 <?php	} else { ?>

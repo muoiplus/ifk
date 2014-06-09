@@ -79,13 +79,13 @@
                 <div class="header_right">
                     <div class="language">
 
-                        <a href="#">
+                        <a href="<?php echo get_site_url(); ?>/en">
                             <img src="<?php bloginfo('template_directory'); ?>/images/en-US.png" title="English" alt="en-US.png">English
                         </a>
-                        <a href="#">
+                        <a href="<?php echo get_site_url(); ?>/ru">
                             <img src="<?php bloginfo('template_directory'); ?>/images/ru-RU.png" title="Russia" alt="ru-RU.png">Russia
                         </a>
-                        <a href="#">
+                        <a href="<?php echo get_site_url(); ?>/de">
                             <img src="<?php bloginfo('template_directory'); ?>/images/de-DE.png" title="Germany" alt="de-DE.png">German
                         </a>
 

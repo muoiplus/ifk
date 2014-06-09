@@ -127,6 +127,7 @@ a:hover {
     cursor: pointer;
     width: 21px;
     height: 37px;
+    font-size: 0px;
 }
 
 /*Memu*/
