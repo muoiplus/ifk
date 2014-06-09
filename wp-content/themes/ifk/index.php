@@ -84,7 +84,6 @@ get_header(); ?>
     $i = 0;
     foreach($category_ids as $cat_id) {
         $i++;
-        if($i > 5){break;}
         $cat_name = get_cat_name($cat_id);
         if($cat_name !="Uncategorized"){
         ?>
