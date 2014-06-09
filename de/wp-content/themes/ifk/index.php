@@ -89,8 +89,8 @@ get_header(); ?>
         if($cat_name !="Uncategorized"){
         ?>
         <div class="item">
-            <a title="Residential Projects" href="<?php echo get_category_link($cat_id);?>">
-                <img alt="Residential Projects" src="<?php echo z_taxonomy_image_url($cat_id); ?>">
+            <a title="<?php echo $cat_name;?>" href="<?php echo get_category_link($cat_id);?>">
+                <img alt="<?php echo $cat_name;?>" src="<?php echo z_taxonomy_image_url($cat_id); ?>">
             </a>
             <div class="content-b">
                 <a href="<?php echo get_category_link($cat_id);?>"> <h3> <?php echo $cat_name;?> </h3></a>

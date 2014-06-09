@@ -19,16 +19,23 @@ get_header(); ?>
                         <h3>Project</h3>
                         <div class="content-box">
                             <ul class="sidebar_list">
-                                <li class="first">
-                                    <a title="Residential Projects" href="/residential-projects-72">Residential Projects</a>
-                                </li>
-                                <li>
-                                    <a title="Urban Areas" href="/urban-areas-73">Urban Areas</a>
-                                </li>
-                                <li>
-                                    <a title="Commercials - Hospitality - Tourism" href="/commercials--hospitality--tourism-75">Commercials - Hospitality - Tourism</a>
-                                </li>
+                                <?php
+                                $category_ids = get_all_category_ids();
+                                //    unset($category_ids[0]);
+                                $i = 0;
+                                foreach($category_ids as $cat_id) {
+                                    $i++;
+                                    $cat_name = get_cat_name($cat_id);
+                                    if($cat_name !="Uncategorized"){
+                                        ?>
+                                        <?php if($i==1):?>
+                                            <li class="first">
+                                                <a title="<?php echo $cat_name;?>" href="<?php echo get_category_link($cat_id);?>"><?php echo $cat_name;?></a>
+                                            </li>
+                                        <?php endif;?>
+                                    <?php }} ?>
                             </ul>
+
 
                         </div>
                     </div>
