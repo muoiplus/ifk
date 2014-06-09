@@ -142,8 +142,9 @@ get_header(); ?>
 <div class="clear"></div>
 
 </div>
+    <div class="div-bottom"></div>
 </div>
 
-
+<?php if (function_exists (Ihrss)) Ihrss(); ?>
 <?php //get_sidebar(); ?>
 <?php get_footer(); ?>
